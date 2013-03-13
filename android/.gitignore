@@ -1,5 +1,8 @@
-
 .DS_Store
 *.swp
 *.swo
 bin/*
+*.properties
+gen/*
+build.xml
+proguard-project.txt
