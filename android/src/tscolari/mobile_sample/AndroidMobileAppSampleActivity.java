@@ -19,17 +19,10 @@ public class AndroidMobileAppSampleActivity extends Activity {
         WebSettings webSettings = mainWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         
-        mainWebView.setWebViewClient(new MyCustomWebViewClient());
+        mainWebView.setWebViewClient(new LBSWebViewClient());
+        mainWebView.addJavascriptInterface(new JsInterface(this), "Phone"); 
         mainWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        
+       
         mainWebView.loadUrl("http://192.168.1.103/");
-    }
-    
-    private class MyCustomWebViewClient extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
     }
 }
