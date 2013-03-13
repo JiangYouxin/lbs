@@ -6,11 +6,12 @@ block content
   script(src="/javascripts/view.index.js")
 
   #left-column.column
-    h2 Elige tu héroe
+    h2 Onlines
+    a(id='refresh', href='#') Refresh
     ul#heroes
       each hero in heroes
         li(class='hero-name')
-          a(href='#') #{hero}
+          p #{hero}
 
   #right-column.column
     h2 Facts
