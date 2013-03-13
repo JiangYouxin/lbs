@@ -12,4 +12,7 @@ public class JsInterface {
         TelephonyManager tm = (TelephonyManager)context.getSystemService(Context.TELEPHONY_SERVICE);
         return tm.getDeviceId();
     }
+    public void locate(String callback) {
+
+    }
 }
